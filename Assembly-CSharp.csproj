@@ -62,6 +62,7 @@
      <Compile Include="Assets\Script\EnemyMovement.cs" />
      <Compile Include="Assets\Script\LookX.cs" />
      <Compile Include="Assets\Script\LookY.cs" />
+     <Compile Include="Assets\Script\ObjectCollision.cs" />
      <Compile Include="Assets\Script\PlayerMovement.cs" />
      <None Include="Assets\Terrain Assets\Sounds\17298__luffy__luffy-fire3.txt" />
      <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
