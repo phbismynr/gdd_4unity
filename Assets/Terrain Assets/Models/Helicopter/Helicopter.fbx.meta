@@ -1,0 +1,153 @@
+fileFormatVersion: 2
+guid: 3d878254739dc394094fd3d502e4c546
+timeCreated: 1594455764
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Bell_206_L4
+    100004: Bell_206_L4.001
+    100006: Bell_206_L4.003
+    100008: Bell_206_L4.004
+    100010: Bell_206_L4.005
+    100012: Bell_206_L4.007
+    100014: Bell_206_L4.008
+    100016: Bell_206_L4.009
+    100018: Bell_206_L4.021
+    100020: Blade
+    100022: Blade2
+    100024: Body
+    100026: Door2.L
+    100028: Door2.R
+    100030: Door3.L
+    100032: Door3.R
+    100034: //RootNode
+    100036: Lamp
+    100038: Lamp.001
+    400000: Armature
+    400002: Bell_206_L4
+    400004: Bell_206_L4.001
+    400006: Bell_206_L4.003
+    400008: Bell_206_L4.004
+    400010: Bell_206_L4.005
+    400012: Bell_206_L4.007
+    400014: Bell_206_L4.008
+    400016: Bell_206_L4.009
+    400018: Bell_206_L4.021
+    400020: Blade
+    400022: Blade2
+    400024: Body
+    400026: Door2.L
+    400028: Door2.R
+    400030: Door3.L
+    400032: Door3.R
+    400034: //RootNode
+    400036: Lamp
+    400038: Lamp.001
+    2100000: 19___Default__Body.jpg.001
+    2100002: Glass__Body.jpg.001
+    2100004: 20___Default__blade.jpg.001
+    4300000: Bell_206_L4.009
+    4300002: Bell_206_L4.008
+    4300004: Bell_206_L4.004
+    4300006: Bell_206_L4.005
+    4300008: Bell_206_L4.021
+    4300010: Bell_206_L4
+    4300012: Bell_206_L4.007
+    4300014: Bell_206_L4.003
+    4300016: Bell_206_L4.001
+    7400000: Flying
+    7400002: Landed
+    9500000: //RootNode
+    10800000: Lamp
+    10800002: Lamp.001
+    13700000: Bell_206_L4
+    13700002: Bell_206_L4.001
+    13700004: Bell_206_L4.003
+    13700006: Bell_206_L4.004
+    13700008: Bell_206_L4.005
+    13700010: Bell_206_L4.007
+    13700012: Bell_206_L4.008
+    13700014: Bell_206_L4.009
+    13700016: Bell_206_L4.021
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
