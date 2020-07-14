@@ -288,6 +288,8 @@ GameObject:
   - component: {fileID: 114318309530521170}
   - component: {fileID: 135493585264146164}
   - component: {fileID: 114437941803667342}
+  - component: {fileID: 114392407748319804}
+  - component: {fileID: 82630976970128146}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
@@ -2735,6 +2737,86 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3738228, y: 0.7444153, z: 0.52058864}
   m_Center: {x: -0.7454247, y: 0.030434728, z: 0.090342194}
+--- !u!82 &82630976970128146
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1191031442422300}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!111 &111003320501080208
 Animation:
   m_ObjectHideFlags: 1
@@ -2778,6 +2860,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maximumHealth: 100
+  _hitSound:
+  - {fileID: 8300000, guid: c0d3fdd369ce82b4fb51d0956bd3e7ea, type: 3}
+  - {fileID: 8300000, guid: e52f98c26ce7053449e8e403b3a53880, type: 3}
+  - {fileID: 8300000, guid: a937ea8d34280904c9b685a269d20699, type: 3}
+  - {fileID: 8300000, guid: aa3390e263167124884cbcaee5e36766, type: 3}
+  - {fileID: 8300000, guid: ab615f0d96cedfb4fbec8d1ccbc191aa, type: 3}
+  - {fileID: 8300000, guid: 2e5fc9e20b072224aa763c34f110526d, type: 3}
+  - {fileID: 8300000, guid: eb71243919630474db30b31855b9c7ff, type: 3}
+  - {fileID: 8300000, guid: 44642fe90955a6847b3960c20b497bb0, type: 3}
+  - {fileID: 8300000, guid: 68129394c381d00469e86372399dc8b4, type: 3}
+  _deathSound: {fileID: 0}
 --- !u!114 &114318309530521170
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2789,6 +2882,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e87e6a8fc4433544f9e20460a076b04f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114392407748319804
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1191031442422300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6263d66036d2b7b4bb39e42a4821820d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dropItemPrefab: {fileID: 147866, guid: 2398398009cd3134e99d728baf4aa18f, type: 2}
+  _chanceToDrop: 25
 --- !u!114 &114437941803667342
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2800,8 +2906,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b4b6655b4e265941addbffe71e48dcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _attactDelay: 1
-  _damageDeath: 5
+  _attackDelay: 1
+  _damageDealt: 5
+  _hitEffectPrefab: {fileID: 100002, guid: 9407f3413e6e5414baec8a16b8102b6d, type: 2}
 --- !u!114 &114692671836195824
 MonoBehaviour:
   m_ObjectHideFlags: 1

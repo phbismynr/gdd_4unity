@@ -3,10 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Health : MonoBehaviour {
-
-	[SerializeField]
+[SerializeField]
 	int _maximumHealth = 100;
 	int _currentHealth = 0;
+
+	[SerializeField]
+	AudioClip[] _hitSound;
+
+	[SerializeField]
+	AudioClip _deathSound;
 
 	Renderer _renderer;
 
@@ -20,45 +25,58 @@ public class Health : MonoBehaviour {
 	void Start () {
 		_renderer = GetComponentInChildren<Renderer> ();
 		_currentHealth = _maximumHealth;
-		// GetComponent<Health>().Damage(100);
 
-		GameObject player = GameObject.FindGameObjectWithTag("Player");
-		_playerStats = player.GetComponent<PlayerStats>();
+		GameObject player = GameObject.FindGameObjectWithTag ("Player");
+		_playerStats = player.GetComponent<PlayerStats> ();
+			
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(isDeath() && !_renderer.isVisible){
-			Destroy(gameObject);
+		if (isDeath() && !_renderer.isVisible){
+			Destroy (gameObject);
 		}
+
+		
 	}
 
-	public void  Damage(int damageValue){
+	public void Damage(int damageValue){
 		_currentHealth -= damageValue;
+		if (_currentHealth < 0){
+			_currentHealth = 0;
+		} else {
+			if (_hitSound != null && _hitSound.Length > 0){
+				AudioSource audio = GetComponent<AudioSource> ();
+				AudioClip soundToUse = _hitSound [Random.Range (0, _hitSound.Length)];
+				audio.clip = soundToUse;
+				audio.Play ();
+			}
+		}
 
-		if(_currentHealth <= 0){
-			// Destroy (gameObject);
+		if (_currentHealth == 0){
+			if (_hitSound != null){
+				AudioSource audio = GetComponent<AudioSource> ();
+				audio.clip = _deathSound;
+				audio.Play ();
+			}
+
 			Animation anim = GetComponentInChildren<Animation> ();
-			anim.Stop();
+			anim.Stop ();
 
 			_playerStats.ZombieKilled++;
-			EnemySpawnManager.onEnemyDeath();
-			Destroy(GetComponent<EnemyMovement>());
-			Destroy(GetComponent<EnemyAttack>());
-			Destroy(GetComponent<CharacterController>());
-			Destroy(gameObject, 8.0f);
 
-			// Destroy(GetComponent<PlayerMovement>());
-			// Destroy(GetComponent<PlayerAnimation> ());
+			EnemyDrops ed = GetComponent<EnemyDrops> ();
+			ed.onDeath();
 
-			EnemySpawnManager.onEnemyDeath();
-
+			EnemySpawnManager.onEnemyDeath ();
 			Destroy (GetComponent<EnemyMovement> ());
+			Destroy (GetComponent<EnemyAttack> ());
 			Destroy (GetComponent<CharacterController> ());
+			Destroy (gameObject, 8.0f);
 
 			Regdoll r = GetComponent<Regdoll> ();
-			if(r != null){
-				r.onDeath();
+			if (r != null){
+				r.onDeath ();
 			}
 		}
 	}
